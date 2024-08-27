@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange 11</title>
+</head>
+<body>
+
+    <input type="text" id="text1">
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();">
+    <input type="button" id="button2" value="Display" onclick="display_array();">
+    <div id="Result"></div>
+
+    <script type="text/javascript">
+        let x = 0;
+        let array = [];
+
+        function add_element_to_array() {
+            array[x] = document.getElementById("text1").value;
+
+            x++;
+            document.getElementById("text1").value = "";
+        }
+
+        function display_array(){
+            var e = "<hr/>";
+            for (var y = 0; y < array.length; y++) {
+                e += "Element " + y + " = " + array[y] + "<br/>";
+              }
+              document.getElementById("Result").innerHTML = e;
+        }
+    </script>
+    
+</body>
+</html>
